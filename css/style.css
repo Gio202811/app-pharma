@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.header {
+    padding: 15px;
+}
+
+.header h3 {
+    font-size: 13px;
+    color: #7a7a7a;
+    margin-bottom: 5px;
+}
+
+.header h1 {
+    font-size: 34px;
+}
+
+.container {
+    padding: 0 15px 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e7e7e7;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+.span-full {
+    grid-column: 1 / -1;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.span-3 {
+    grid-column: span 3;
+}
+
+.span-5 {
+    grid-column: span 5;
+}
+
+.activo {
+    background: #005ecb;
+    color: white;
+}
+
+h1 {
+    margin-top: 8px;
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 11px;
+    color: #8a8a8a;
+}
+
+.activo h4 {
+    color: #dbeafe;
+}
+
+p {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #666;
+}
+
+.activo p {
+    color: white;
+}
+
+.titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #777;
+}
+
+/* BOTONES DE ICONOS */
+
+.btn-agregar,
+.btn-editar,
+.btn-eliminar {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #f3f4f6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+.btn-agregar:hover,
+.btn-editar:hover,
+.btn-eliminar:hover {
+    background: #e5e7eb;
+}
+
+.btn-agregar i,
+.btn-editar i,
+.btn-eliminar i {
+    font-size: 15px;
+    color: #555;
+}
+
+.btn-lote {
+    padding: 8px 14px;
+    border-radius: 6px;
+    background: #f2f2f2;
+    color: #555;
+    font-size: 13px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-lote:hover {
+    background: #e5e7eb;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 12px 10px;
+    background: #f8f8f8;
+    font-size: 12px;
+    color: #777;
+}
+
+td {
+    padding: 13px 10px;
+    border-bottom: 1px solid #ececec;
+    font-size: 13px;
+}
+
+tbody tr:hover {
+    background: #fafafa;
+}
+
+tbody tr.seleccionado {
+    background: #dbeafe;
+}
+
+button img {
+    width: 18px;
+    height: 18px;
+}
+
+.ico {
+    width: 16px;
+    height: 16px;
+}
+
+/* MODAL PRINCIPAL */
+
+.modal {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 40px auto;
+    padding: 24px;
+    border-radius: 12px;
+    width: 92%;
+    max-width: 480px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-content h2 {
+    border-bottom: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+/* CONTENEDORES DE FORMULARIO */
+
+.form-group {
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a4a4a;
+    margin-bottom: 2px;
+}
+
+/* INPUTS Y SELECTS UNIFICADOS (Estilo limpio de la imagen) */
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 38px;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #1f2937;
+    background-color: #fafafa;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #005ecb;
+    background-color: #fff;
+}
+
+/* DISEÑO DE FILAS DOBLES (.fila-2) */
+.fila-2 {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.fila-2 .form-group {
+    flex: 1;
+    width: 50%;
+}
+
+/* BOTONES DEL MODAL */
+
+.form-botones {
+    border-top: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 0;
+}
+
+.btn-guardar-lote {
+    background: #1565c0;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn-guardar-lote:hover {
+    background: #0d47a1;
+}
+
+.btn-cancelar-lote {
+    background: #1565c0;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn-cancelar-lote:hover {
+    background: #0d47a1;
+}
+
+/* OTROS ESTILOS DE TU GRID ORIGINAL */
+
+.grid .card:nth-child(1) h1 {
+    color: blue;
+}
+
+.grid .card:nth-child(2) h1 {
+    color: red;
+}
+
+.grid .card:nth-child(3) h1 {
+    color: gray;
+}
