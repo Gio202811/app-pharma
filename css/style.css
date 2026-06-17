@@ -111,7 +111,6 @@ button {
     color: #777;
 }
 
-/* BOTONES DE ICONOS */
 
 .btn-agregar,
 .btn-editar,
@@ -194,8 +193,6 @@ button img {
     height: 16px;
 }
 
-/* MODAL PRINCIPAL */
-
 .modal {
     position: fixed;
     z-index: 2000;
@@ -246,7 +243,6 @@ button img {
     margin-bottom: 2px;
 }
 
-/* INPUTS Y SELECTS UNIFICADOS (Estilo limpio de la imagen) */
 .form-group input,
 .form-group select {
     width: 100%;
@@ -268,7 +264,6 @@ button img {
     background-color: #fff;
 }
 
-/* DISEÑO DE FILAS DOBLES (.fila-2) */
 .fila-2 {
     display: flex;
     gap: 16px;
@@ -279,8 +274,6 @@ button img {
     flex: 1;
     width: 50%;
 }
-
-/* BOTONES DEL MODAL */
 
 .form-botones {
     border-top: none;
@@ -316,8 +309,6 @@ button img {
 .btn-cancelar-lote:hover {
     background: #0d47a1;
 }
-
-/* OTROS ESTILOS DE TU GRID ORIGINAL */
 
 .grid .card:nth-child(1) h1 {
     color: blue;
