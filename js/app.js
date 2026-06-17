@@ -1,7 +1,6 @@
 let id = null;
 let editando = false;
 
-// Variables independientes para rastrear la fila seleccionada de cada tabla
 let filaCategoriaActiva = null;
 let filaMedicamentoActiva = null;
 let filaLoteActiva = null;
@@ -10,11 +9,9 @@ let categoriaSeleccionada = null;
 let medicamentoSeleccionado = null;
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Al iniciar, solo cargamos categorías para controlar el flujo en orden
     cargarDatos('categorias');
     initDeseleccionarTablas();
 
-    // --- MODALES AGREGAR ---
     document.getElementById('btnAbrirCategoria').addEventListener('click', () => {
         editando = false;
         document.getElementById('formCategoria').reset();
@@ -93,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('modalLote').style.display = 'flex';
     });
 
-    // --- CERRAR MODALES ---
     document.getElementById('cerrarCategoria').addEventListener('click', () => {
         document.getElementById('modalCategoria').style.display = 'none';
     });
@@ -236,8 +232,6 @@ function viewLotes(data) {
     });
 }
 
-// --- PROCESAMIENTO DE ENVÍO DE FORMULARIOS ---
-
 document.getElementById('formCategoria').addEventListener('submit', function(e){
     e.preventDefault();
     const fd = new FormData(this);
@@ -316,8 +310,6 @@ document.getElementById('formLote').addEventListener('submit', function(e){
         this.reset();
     });
 });
-
-// --- BOTONES ELIMINAR ---
 
 document.getElementById('btnEliminarCategoria').addEventListener('click', () => {
     if(!filaCategoriaActiva){
